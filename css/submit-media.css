@@ -1,0 +1,92 @@
+@media only screen and (max-width: 1016px) {
+	ul {
+		padding-inline-start: 0px;
+	}
+	input[type=radio],input[type=checkbox]  {
+		width: 30px;
+		height: 30px;
+	}
+	
+	input[type=radio]:after  {
+		width: 30px;
+		height: 30px;
+	}
+	 
+	input[type=checkbox]:after  {
+		width: 30px;
+		height: 30px;
+	}
+	
+	textarea {
+		font-size: 35px;
+		/* font-family: "微软雅黑"; */
+		border: 1px solid black;
+		border-radius: 15px;
+		background: rgba(255,255,255,0);
+	}
+	
+	h1 {
+		margin: 0px;
+		font-size: 70px;
+	}
+	
+	input {
+		font-size: 35px;
+	}
+	
+	img {
+		/* border: 1px solid blue; */
+	}
+	
+	.submit-img {
+		margin-top: 20px;
+		width: 90%;
+		height: 100%;
+	}
+	
+	
+	.submit-main {
+		width: 90%;
+		height: auto;
+	}
+	
+	.submit-main-img {
+		/* border: 1px solid red; */
+		float: none;
+		width: 65%;
+		height: auto;
+		/* height: 800px; */
+		/* padding-top: 100px; */
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 10%;
+	}
+	
+	.submit-main-input {
+		/* border: 1px solid red; */
+		float: none;
+		width: 99%;
+		height: 800px;
+		margin-left: 1%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 35px;
+	}
+	
+	.submit-form-block input {
+		width: 80%;
+		height: 70px;
+		font-size: 40px;
+	}
+	
+	.submit-form-submit input {
+		width: 80%;
+		height: 90px;
+		font-size: 40px;
+		margin-top: 0px;
+	}
+	
+	.submit-footer {
+		margin-top: 0px;
+	}
+}

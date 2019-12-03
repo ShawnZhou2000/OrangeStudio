@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>橙果报名表</title>
+		<link rel="stylesheet" href="css/submit-main-style.css" />
+		<link rel="stylesheet" href="css/submit-media.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/media.css" />
+		<!-- 新 Bootstrap4 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+		<link rel="stylesheet" type="text/css" href="css/prettify.css" />
+		<link rel="icon" href="img/favicon.ico" />
+
+	</head>
+	<body>
+		<div class="submit">
+			<div class="submit-main">
+				<div class="submit-header">
+					<h1>橙果工作室报名表</h1>
+				</div>
+				<form method="POST" onsubmit="return every()">
+					<div class="submit-main-input">				
+						<ul class="submit-ul">
+							<li class="submit-li">
+								<div class="submit-form-block">
+									学号 <input style="text-align: center;" type="text" name="studentid" 
+									placeholder="请输入12位学号" oninput="value=value.replace(/[^\d]/g,'')"
+									 onblur="lookstudentid(this)" /><br />
+									<span style="color: red;font-size: 8px" id="studenttwo"></span>
+								</div>
+							</li>
+
+							<li class="submit-li">
+								<div class="submit-form-block">
+									姓名 <input style="text-align: center;" type="text" name="username" 
+									placeholder="请输入姓名" onblur="lookname(this)" /><br />
+									<span style="color: red;font-size: 8px" id="nametwo"></span>
+								</div>
+							</li>
+
+							<li class="submit-li">
+								<div class="submit-radio-block">
+									性别
+									男<input class="circle" value="1" type="radio" name="sex" checked />
+									女<input class="circle" value="0" type="radio" name="sex" />
+								</div>
+							</li>
+
+							<li class="submit-li">
+								<div class="submit-form-block">
+									电话 <input style="text-align: center;" type="text" name="phone"
+									placeholder="请输入11位手机号码" oninput="value=value.replace(/[^\d]/g,'')"
+									onblur="lookphone(this)" /><br />
+									<span style="color: #ff272c;font-size: 8px" id="phonetwo"></span>
+								</div>
+							</li>
+
+							<li class="submit-li">
+								<div class="submit-form-block">
+									学院 <input style="text-align: center;" type="text" name="academic" 
+									placeholder="请输入你所在的学院" onblur="lookacademic(this)" /><br />
+									<span style="color: #ff272c;font-size: 8px" id="academictwo"></span>
+								</div>
+							</li>
+
+							<li class="submit-li">
+								<div class="submit-form-block">
+									QQ <input style="text-align: center;" type="text" name="qq" placeholder="请输入你的qq号码" 
+									oninput="value=value.replace(/[^\d]/g,'')" onblur="lookqq(this)" /><br />
+									<span style="color: #ff272c;font-size: 8px" id="qqtwo"></span>
+								</div>
+							</li>
+
+							<li class="submit-li submit-group-header">
+								<span style="margin-left: 17%;">意向小组：</span>
+								<div class="submit-radio-block submit-group">
+
+									网站组<input class="circle" value="网站组" type="radio" name="intention" checked /><br>
+									<!-- 程序设计组<input class="circle" value="程序设计组" type="radio" name="intention" /><br> -->
+									OS平台组<input class="circle" value="OS平台组" type="radio" name="intention" /><br>
+									嵌入式组<input class="circle" value="嵌入式组" type="radio" name="intention" /><br>
+									大数据组<input class="circle" value="大数据组" type="radio" name="intention" /><br>
+									硬件组<input class="circle" value="硬件组" type="radio" name="intention" />
+
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="submit-main-img">
+						<img class="submit-img" src="https://s2.ax1x.com/2019/09/05/nnIPJg.jpg" />
+					</div>
+
+					<div class="submit-form-block">
+						<textarea style="margin-top: 15%; font-size: 35px;"
+						cols="43" rows="10" name="introduce" placeholder="请填写自我介绍，让我们对你有初步的了解~"
+						 onblur="lookintroduce(this)"></textarea><br />
+						<span style="color: #ff272c;font-size: 8px" id="introducetwo"></span>
+					</div>
+
+					<div style="font-size: 36px;">
+						报名表填写有误？请关注橙果工作室微信公众号，<br>回复“报名表修改+正确的个人信息（学号，姓名，性别，电话，学院，QQ，意向部门，个人介绍）”即可。
+					</div>
+					<div class="submit-footer">
+						<ul class="submit-ul">
+							<li class="submit-li">
+								<div class="submit-form-submit">
+									<input type="button" value="提交" id="buttons" onclick="submitevery()" />
+								</div>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="layer/layer.js"></script>
+		<script type="text/javascript">
+			var studentidpuls = false;
+			var phonepuls = false;
+			var usernamepuls = false;
+			var academicpuls = false;
+			var qqpuls = false;
+			var introducepuls = false;
+
+			function every() {
+				var buttons = document.getElementById('buttons');
+				if (studentidpuls == false || phonepuls == false || usernamepuls == false || academicpuls == false || qqpuls ==
+					false || introducepuls == false) {
+					buttons.className = 'dubmint-no';
+					return false;
+				} else {
+					buttons.className = 'dubmint-ok';
+					return true;
+				}
+			}
+			var introducetwo = document.getElementById('introducetwo');
+			var studenttwo = document.getElementById('studenttwo');
+			var phonetwo = document.getElementById('phonetwo');
+			var nametwo = document.getElementById('nametwo');
+			var academictwo = document.getElementById('academictwo');
+			var qqtwo = document.getElementById('qqtwo');;
+
+			function lookstudentid(e) {
+				var studentid = e.value;
+				if (studentid.length != 12) {
+					layer.msg("你输入的学号不规范");
+				} else {
+					$.post('lookstudentid', {
+						'studentid': studentid
+					}, function(data) {
+						if (data == 1) {
+							layer.msg("你已报名无需再次报名");
+							studentidpuls = false;
+							every()
+						} else {
+							studentidpuls = true;
+							every()
+						}
+					}, 'json')
+				}
+			}
+
+			function lookphone(e) {
+				var phone = e.value;
+				var myreg = /^[1](([3][0-9])|([4][5-9])|([5][0-3,5-9])|([6][5,6])|([7][0-8])|([8][0-9])|([9][1,8,9]))[0-9]{8}$/;
+				var iden = myreg.test(phone);
+				if (iden == true) {
+					$.post('lookphone', {
+						'phone': phone
+					}, function(data) {
+						if (data == 1) {
+							layer.msg("你已报名无需再次报名");
+							phonepuls = false;
+							every()
+						} else {
+							phonepuls = true;
+							every()
+						}
+					}, 'json')
+				} else {
+					layer.msg("你输入的手机号不规范，请正确输入");
+					phonepuls = false;
+					every()
+				}
+			}
+
+			function lookname(e) {
+				var name = e.value;
+				if (name.length == 0) {
+					layer.msg("请填写姓名");
+					usernamepuls = false;
+					every()
+				} else {
+					usernamepuls = true;
+					every()
+				}
+			}
+
+			function lookacademic(e) {
+				var academic = e.value;
+				if (academic.length == 0) {
+					layer.msg("请填写所在学院");
+					academicpuls = false;
+					every()
+				} else {
+					academicpuls = true;
+					every()
+				}
+			}
+
+			function lookqq(e) {
+				var qq = e.value;
+				if (qq.length == 0) {
+					layer.msg("请填写自己的qq");
+					qqpuls = false;
+					every()
+				} else {
+					qqpuls = true;
+					every()
+				}
+			}
+
+			function lookintroduce(e) {
+				var introduce = e.value;
+				if (introduce.length == 0) {
+					layer.msg("请填写个人介绍");
+					introducepuls = false;
+					every()
+				} else {
+					introducepuls = true;
+					every()
+				}
+			}
+
+			function submitevery() {
+				var lookok = every();
+				var studentid = document.getElementsByName('studentid')[0].value;
+				var username = document.getElementsByName('username')[0].value;
+				var sex = document.getElementsByName('sex');
+				var sexls = null;
+				for (var i = 0; i < sex.length; i++) {
+					if (sex[i].checked) {
+						sexls = sex[i].value;
+					}
+				}
+				var phone = document.getElementsByName('phone')[0].value;
+				var academic = document.getElementsByName('academic')[0].value;
+				var introduce = document.getElementsByName('introduce')[0].value;
+				var intention = document.getElementsByName('intention');
+				var intentionls = null;
+				for (var i = 0; i < intention.length; i++) {
+					if (intention[i].checked) {
+						intentionls = intention[i].value;
+					}
+				}
+				var qq = document.getElementsByName('qq')[0].value;
+				var everylook = document.getElementById('everylook');
+				if (lookok == false) {
+					layer.msg('你的信息还不完整，请确认');
+				} else {
+					$.post('registered', {
+						'studentid': studentid,
+						'username': username,
+						'sex': sexls,
+						'qq': qq,
+						'phone': phone,
+						'intention': intentionls,
+						'academic': academic,
+						'introduce': introduce,
+					}, function(data) {
+						if (data == 1) {
+							layer.msg('注册成功');
+						} else {
+							layer.msg('注册失败');
+						}
+					})
+				}
+			}
+		</script>
+	</body>
+</html>

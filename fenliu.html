@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网站组的分流</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<style>
+			body{
+            color: white;
+            background: linear-gradient(to bottom right, rgb(65, 126, 118) 50%, #215366 50%);
+            background-size:cover;
+            background-attachment: fixed;
+            text-align: center;
+			}
+        form{
+			margin: 150px auto;
+            /* margin: 200px auto;
+            width: 500px;
+            height: 400px; */}
+        #name{
+            font-size: 30px;
+            top: 0px;}
+        #want {
+            font-size: 30px;}
+        #txtName{
+            font-size: 20px;
+            width: 340px;}
+        #login_click{ 
+            margin-top:32px; 
+            height:40px;}
+        #login_click a{
+            text-decoration:none;
+            background:#566577;
+            color:#f2f2f2;
+            padding: 10px 30px 10px 30px;
+            font-size:16px;
+            font-weight:bold;
+            border-radius:3px;
+            transition:all linear 0.30s;}
+        #login_click a:hover {
+            background:#2363ca;}
+        li{
+            list-style: none;}
+        .w3lsg-bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;}
+        .w3lsg-bubbles li {
+            position: absolute;
+            list-style: none;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.15);
+            bottom:-160px;
+            animation: square 25s infinite;
+            transition-timing-function: linear; }
+        .w3lsg-bubbles li:nth-child(1) {
+            left: 10%;}
+        .w3lsg-bubbles li:nth-child(2) {
+            left: 10%;
+            width: 80px;
+            height: 80px;
+            -webkit-animation-delay: 2s;
+            -moz-animation-delay: 2s;
+            -o-animation-delay: 2s;
+            -ms-animation-delay: 2s;
+            animation-delay: 2s;
+            -webkit-animation-duration: 17s;
+            -moz-animation-duration: 17s;
+            -o-animation-duration: 17s;
+            animation-duration: 17s;}
+        .w3lsg-bubbles li:nth-child(3) {
+            left: 20%;
+            -webkit-animation-delay: 4s;
+            -moz-animation-delay: 4s;
+            -o-animation-delay: 4s;
+            -ms-animation-delay: 4s;
+            animation-delay: 4s;
+        }
+        .w3lsg-bubbles li:nth-child(4) {
+            left: 38%;
+            width: 60px;
+            height: 60px;
+            -webkit-animation-duration: 22s;
+            -moz-animation-duration: 22s;
+            -o-animation-duration: 22s;
+            -ms-animation-duration: 22s;
+            animation-duration: 22s;
+            background-color: rgba(255, 255, 255, 0.25);}
+        .w3lsg-bubbles li:nth-child(5) {
+            left: 70%;}
+        .w3lsg-bubbles li:nth-child(6) {
+            left: 80%;
+            width: 120px;
+            height: 120px;
+            -webkit-animation-delay: 3s;
+            -moz-animation-delay: 3s;
+            -o-animation-delay: 3s;
+            -ms-animation-delay: 3s;
+            animation-delay: 3s;
+            background-color: rgba(255, 255, 255, 0.2);}
+        .w3lsg-bubbles li:nth-child(7) {
+            left: 32%;
+            width: 160px;
+            height: 160px;
+            -webkit-animation-delay: 7s;
+            -moz-animation-delay: 7s;
+            -o-animation-delay: 7s;
+            -ms-animation-delay: 7s;
+            animation-delay: 7s;}
+        .w3lsg-bubbles li:nth-child(8) {
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            -webkit-animation-delay: 15s;
+            -moz-animation-delay: 15s; 
+            animation-delay: 15s;
+            -webkit-animation-duration: 40s;
+            -moz-animation-duration: 40s;
+            animation-duration: 40s;}
+        .w3lsg-bubbles li:nth-child(9) {
+            left: 22%;
+            width: 10px;
+            height: 10px;
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+            -webkit-animation-duration: 40s;
+            animation-duration: 40s;
+            background-color: rgba(255, 255, 255, 0.3);}
+        .w3lsg-bubbles li:nth-child(10) {
+            left: 80%;
+            width: 160px;
+            height: 160px;
+            -webkit-animation-delay: 11s;
+            animation-delay: 11s;}
+        @-webkit-keyframes square {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(-700px) rotate(600deg);        }
+        }
+        @keyframes square {
+            0% {
+                transform: translateY(0);        
+            }
+            100% {
+                transform: translateY(-700px) rotate(600deg);        
+            }
+        }
+		
+		input[type=radio],
+		input[type=checkbox] {
+			display: inline-block;
+			vertical-align: middle;
+			width: 25px;
+			height: 25px;
+			margin-left: 5px;
+			-webkit-appearance: none;
+			background-color: transparent;
+			border: 0;
+			outline: 0 !important;
+			line-height: 20px;
+			color: #d8d8d8;
+		}
+		
+		input[type=radio]:after {
+			content: "";
+			display: block;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 14px;
+			font-size: 16px;
+			color: #fff;
+			border: 2px solid #ddd;
+			background-color: #fff;
+			box-sizing: border-box;
+		}
+		
+		input[type=radio]:checked:after {
+			/* content: "L"; */
+			transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+			-webkit-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+			border-color: #FFA500;
+			background-color: #FFA500;
+		}
+		
+    </style>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<form>
+				<h1>网站组分流意向表</h1>
+				<p style="font-size: 36px;">姓名：</p>
+				<input type="text" placeholder="请输入姓名" class="form-control" style="border-radius:15px; width: 40%;text-align: center; margin: 0 auto;"><br>
+				<p style="font-size: 36px;">分流意向：</p>
+				<input type="radio" name="分流意向" value="橙果官网"><span style="font-size: 20px;margin-left: 2%;">橙果官网</span><br>
+				<input type="radio" name="分流意向" value="站群维护"><span style="font-size: 20px;margin-left: 2%;">站群维护</span><br>
+				<input type="radio" name="分流意向" value="两者皆可"><span style="font-size: 20px;margin-left: 2%;">两者皆可</span><br>
+			
+			
+			<!-- 	<a id="" href="#" onclick="alert('保存成功')">&emsp;&emsp;提
+						交&emsp;&emsp;</a> -->
+				<input type="submit" class="btn btn-primary btn-lg" id="btlogin" style="margin-top: 2%;" value="提交" />
+			
+			</form>
+			<ul class="w3lsg-bubbles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+
+
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</body>

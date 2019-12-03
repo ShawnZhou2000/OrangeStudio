@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!-- 
+	2019.12.2 橙果工作室主页 beta version
+	本页面由橙果工作室网站组提供技术支持
+	对页面问题有任何疑问或反馈请向橙果官网运维人员提交。
+	!!!-----------------WARNING-----------------!!!
+	非准许的修改需求外，请勿改动此代码！
+	!!!-----------------WARNING-----------------!!!
+	请进行维护的同学在修改之前认真阅读附近的注释！
+	!!!-----------------WARNING-----------------!!!
+	请进行维护的同学在修改时认真遵守主页注释中的编码规范！
+	!!!-----------------WARNING-----------------!!!
+	请在进行大幅度改动之前做好备份工作！
+	!!!-----------------WARNING-----------------!!!
+ -->
+<!-- 
+	2019.8.13 橙果官网简易编码规范
+	为了代码风格的一致性，请遵守此规范！
+	对代码规范问题有任何疑问或反馈请向橙果官网运维人员提交。
+	考虑到多方面原因，这份规范没有非常严格，但为了他人的维护方便，请遵守此规范！
+	
+	· 缩进与换行
+		统一采用等长于四个空格的Tab进行缩进，上下层之间只间隔一个Tab。
+		当一行嵌套标签长度过短时可以不换行，以不超过一屏幕为宜，若长度过长，浏览方便起见建议换行。
+		同层级的块之间是否间隔一行以显示协调为宜。
+		双标签的开头与结尾若不在同一行，则必须采用等长的缩进。
+		例：(√)				例：(×)
+		<span>				<span>
+			...					...
+		</span>					</span>
+		
+		如在标签内需要设置多种属性，请用一个空格分隔。
+		例：(√)
+			<div id="demo" class="carousel slide" data-ride="carousel">
+		例：(×)
+			<div id="demo"class="carousel slide"data-ride="carousel">
+			
+		CSS文件中左花括号"{"不换行，与最后一个选择器的名称间隔一个字符
+		例：
+			.navbar {
+				...
+			}
+			
+		提示：在HbuilderX开发环境下，可按下ctrl+k按照此规范简单排版。
+		
+	· 标签与文件的命名
+		命名要做到见名知意，我们建议使用简单明了的英文单词组合或拼音组合。
+		文件命名允许使用意义明确的汉字。
+		禁止使用"a","bbb","def"等无意义词汇命名。
+		若标签含有包含关系，在使用英文单词或拼音命名时采用'-'连接。例:footer(页脚) 与 footer-qrc（页脚的二维码）
+		
+	· 注释的编写
+		对每一个大段的代码块都应在其上方注有简单的注释。
+		请尽量让注释简单明了，言简意赅。
+		
+ -->
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>橙果工作室</title>
+		<!-- 
+			style.css：页面主要的css文件，控制整体布局的样式
+			media.css：页面响应式布局的css文件，控制手机端或平板端的样式
+		-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/media.css" />
+		<!-- 以下是页面需要用到的Bootstrap4框架核心CSS文件 -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+		<link rel="stylesheet" type="text/css" href="css/prettify.css" />
+		<!-- 展示页面标签小图标 -->
+		<link rel="icon" href="img/favicon.ico" />
+		<!-- 启用响应式布局 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+	<body>
+		<!-- 导航栏开始 -->
+		<nav class="navbar navbar-expand-md navbar-dark" style="background: rgba(173, 244, 228, 1)">
+			<!-- 左上橙果工作室logo -->
+			<a class="navbar-brand" href="index.html">
+				<img src="https://s2.ax1x.com/2019/09/04/nZbVmt.png" alt="logo" style="width:155px;">
+			</a>
+			<!-- 响应式导航栏中展开按钮 -->
+			<!-- <a class="nav-link" href="application.html">
+				<button type="button" class="btn btn-primary" data-toggle="collapse">
+					关于我们
+				</button>
+			</a> -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<img style="width: 20px; height: 20px;" src="img/展开.png">
+			</button>
+			<!-- 导航列表开始 -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="xuexibu.html">学习部</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="wailianbu.html">外联部</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="xuanchuanbu.html">宣传部</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="mishubu.html">秘书部</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="wangzhanzu.html">网站组</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="chengxushejizu.html">程序设计组</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="dashujuzu.html">大数据组</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="qianrushizu.html">嵌入式组</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="yingjianzu.html">硬件组</a>
+					</li>
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="application.html">
+							<button type="button" class="btn btn-primary">报名入口</button>
+						</a>
+					</li> -->
+				</ul>
+			</div>
+			<!-- 导航列表结束 -->
+		</nav>
+		<!-- 导航栏结束 -->
+
+		<!-- 大轮播图开始 -->
+		<div id="demo" class="carousel slide" data-ride="carousel">
+
+			<!-- 指示符 -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+				<li data-target="#demo" data-slide-to="3"></li>
+				<li data-target="#demo" data-slide-to="4"></li>
+				<li data-target="#demo" data-slide-to="5"></li>
+				<li data-target="#demo" data-slide-to="6"></li>
+			</ul>
+
+			<!-- 轮播图片开始 -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="lunbo" src="https://s2.ax1x.com/2019/12/03/QMtnu6.jpg">
+					<div class="carousel-caption">
+						<span class="lunbo-title">欢迎访问橙果工作室官网主页</span>
+					</div>
+				</div>
+
+				<div class="carousel-item">
+					<a href="intro.html"><img class="lunbo" src="https://s2.ax1x.com/2019/09/04/nZhsg0.jpg"></a>
+					<div class="carousel-caption">
+						<span class="lunbo-title" style="color: rgb(238,159,159);">
+							关于我们--&gt;橙果工作室
+						</span>
+					</div>
+				</div>
+
+				<div class="carousel-item">
+					<a href="#"><img class="lunbo" src="https://s2.ax1x.com/2019/12/03/QMt14H.jpg"></a>
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="#"><img class="lunbo" src="https://s2.ax1x.com/2019/12/03/QMtQED.jpg"></a>
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="#"><img class="lunbo" src="https://s2.ax1x.com/2019/12/03/QMtuDK.jpg"></a>
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="#"><img class="lunbo" src="https://s2.ax1x.com/2019/12/03/QMtKHO.jpg"></a>
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="#"><img class="lunbo" src="https://s2.ax1x.com/2019/12/03/QMt8Cd.jpg"></a>
+					<div class="carousel-caption">
+					</div>
+				</div>
+			</div>
+			<!-- 轮播图片结束 -->
+
+			<!-- 左右切换按钮 -->
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+		<!-- 大轮播图结束 -->
+
+		<!-- 关于我们开始 -->
+		<img class="img-fluid" src="https://s2.ax1x.com/2019/11/22/M7qbPU.png" />
+		<div id="about-section">
+			<div class="container">
+				<div class="section-title text-center center">
+					<!-- <h2><strong>关于我们</strong></h2> -->
+					<hr>
+					<div class="clearfix"></div>
+					<!-- <p>这里添加一些描述</p> -->
+				</div>
+				<div class="row">
+					<div class="col-md-6"> <img src="img/about.png" class="img-responsive img-fluid" style="max-width: 100%;"> </div>
+					<div class="col-md-6">
+						<div class="about-text"> 
+							<p>
+								橙果工作室是隶属于学校网络信息中心的一个校级组织，正式成立于2015年，为学校“十大骨干名品工作室”之一。<br><br>
+								我们主要负责OS平台，OA平台和学校官网的日常维护工作，拥有自己的官网和“橙果评测”百度百家号，在学校举办电脑义诊活动，可进行基本的嵌入式开发工作，还有专门的团队进行大数据的研究。工作室力争为对计算机感兴趣的同学提供更好的的学习平台。<br><br>
+								我们有全年开放的宽敞明亮的空调自习室，独立的办公室和研发小屋，还有设施齐全的会议室，能够保证成员拥有舒适的学习环境和工作环境。<br><br>
+								这里气氛轻松愉悦，欢乐又不失硬核。我们有强大的软硬件研究团队。这里有前端开发（HTML，CSS，JavaScript等）手到擒来的学长；有后端开发（MySQL，Tomcat，Spring
+								Boot等）易如反掌的大神；有对计算机硬件和维护维修了如指掌的大佬；有专精编程（C/C++，C#，Java，Python），写得了项目，竞赛带你飞的小哥哥；还有许多精通PS，PR，Office等软件的小姐姐……
+								<br><br>
+								这里是技术宅的聚集地，这里是梦想家的启航点，这里没有阶级之分，这里只有实力至上，我们带你从基础到精通，从小白到大神！
+
+							</p>
+							<a href="intro.html" target="_blank">
+								<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="collapse">
+									点此了解橙果工作室历届优秀成员
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <a href="intro.html" target="_blank">
+				<img class="img-fluid" src="img/成员介绍.jpg" >
+			</a> -->
+
+		</div>
+		<!-- 关于我们结束 -->
+
+		<!-- 工作室风采板块开始 -->
+		<img class="img-fluid" src="https://s2.ax1x.com/2019/09/15/ncNdoD.png" />
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 col-md-8 col-lg-6 col-xl-6">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th style="font-size: 16px; text-align: center;">工作室新闻</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2019-12-01 |
+									<a href="https://mp.weixin.qq.com/s/E2yArcyl3BBxJDtR9zZK0g">
+										齐鲁工业大学校园邮箱登录操作指南
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019-11-14 |
+									<a href="https://mp.weixin.qq.com/s/DqGt5ebW6c54nwm5L-HuXA">
+										橙果工作室举行二次纳新
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019-11-11 |
+									<a href="https://mp.weixin.qq.com/s/pmjhqyD_WN3ZX2u78PoWOg">
+										橙果工作室第二届电脑义诊成功举行
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019-09-26 |
+									<a href="https://mp.weixin.qq.com/s/OS9iDaT4YSmiUW8Y5uiQKg">
+										橙果工作室2019级全体大会
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019-09-17 |
+									<a href="https://mp.weixin.qq.com/s/33RPesdgrbY9p4r8HrqozQ">
+										橙果工作室2019级纳新开始啦
+									</a>
+								</td>
+							</tr>
+							
+							
+						</tbody>
+					</table>
+				</div>
+				<!-- 百家号列表开始 5条新闻 -->
+				<div class="col-sm-12 col-md-4 col-lg-6 col-xl-6">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th style="font-size: 16px;text-align: center;">百家号“橙果评测”最新文章
+									<a href="https://baijiahao.baidu.com/u?app_id=1629114261420895">更多</a>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2019-11-13 |
+									<a href="https://mp.weixin.qq.com/s/BT_1d8yP8qfhxDDsqRoL1Q">
+										浅谈Windows系统的安装
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019-09-06 |
+									<a href="http://baijiahao.baidu.com/s?id=1646637184817303542">
+										2019新生入学笔记本推荐——游戏本（y7000P篇）
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019-07-16 |
+									<a href="http://baijiahao.baidu.com/s?id=1639135530665989877">
+										新电脑入手配置,让电脑从“能用”变“好用”
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019-06-21 |
+									<a href="http://baijiahao.baidu.com/s?id=1636937907139882298">
+										正面硬刚骁龙730,华为自研处理器又跨一步
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019-06-20 |
+									<a href="http://baijiahao.baidu.com/s?id=1636728195868775204">
+										荣耀V20 VS 红米K20pro,哪款更具性价比？
+									</a>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+				<!-- 百家号列表结束 -->
+			</div>
+		</div>
+
+		<!-- 工作室风采板块结束 -->
+
+
+		<!-- 部门介绍板块开始 -->
+		<img class="img-fluid" src="https://s2.ax1x.com/2019/09/15/ncNTln.png" />
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/04/nZbY7V.png">
+					<h2 style="text-align: center;">学习部</h2>
+					<p style="text-align: center;">制定计划，储备资源，培训基础，组织考核</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/04/nZbNkT.png">
+					<a href="xuexibu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/04/nZbonI.png">
+					<h2 style="text-align: center;">秘书部</h2>
+					<p style="text-align: center;">整理记录，协助服务，策划活动，考勤监督</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/04/nZbTBt.png">
+					<a href="mishubu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/04/nZqiNT.png">
+					<h2 style="text-align: center;">宣传部</h2>
+					<p style="text-align: center;">对外宣传，对内教育，对上参谋，对下指导</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/04/nZqF4U.png">
+					<a href="xuanchuanbu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4  bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/04/nZq3CD.png">
+					<h2 style="text-align: center;">外联部</h2>
+					<p style="text-align: center;">外联商企，内联校内，承办活动，筹措经费</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/04/nZq88e.png">
+					<a href="wailianbu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 部门介绍板块结束 -->
+
+		<!-- 兴趣小组板块开始 -->
+		<img class="img-fluid" src="https://s2.ax1x.com/2019/09/15/ncNjkF.png" />
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/04/nZqr8g.png">
+					<h2 style="text-align: center;">网站组</h2>
+					<p style="text-align: center;">做网站，我们是认真的</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/04/nZqs2Q.png">
+					<a href="wangzhanzu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/05/nnSsHg.png">
+					<h2 style="text-align: center;">大数据组</h2>
+					<p style="text-align: center;">IT时代，大数据当行</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/05/nnS6EQ.png">
+					<a href="dashujuzu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+			<!-- <div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bumen-left">
+					<img class="img-fluid bumenlogo" src="img/os平台组logo.png">
+					<h2 style="text-align: center;">程序设计组</h2>
+					<p style="text-align: center;">齐鲁工大微信OS平台</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="img/os平台组.jpg">
+					<a href="ospingtaizu.html"><img class="img-fluid bumenmore" 
+					src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div> -->
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/05/nnS7E4.png">
+					<h2 style="text-align: center;">程序设计组</h2>
+					<p style="text-align: center;">Talk is cheap, show me the code</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/05/nnSHUJ.png">
+					<a href="chengxushejizu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4  bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/05/nnSzDO.png">
+					<h2 style="text-align: center;">嵌入式组</h2>
+					<p style="text-align: center;">单片机，电子，电路，嵌入式编程！</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/05/nnpSbD.png">
+					<a href="qianrushizu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4  bumen-left">
+					<img class="img-fluid bumenlogo" src="https://s2.ax1x.com/2019/09/15/ncLVU0.png">
+					<h2 style="text-align: center;">硬件组</h2>
+					<p style="text-align: center;">我们可不仅仅是修电脑的</p>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bumen-right">
+					<img class="img-fluid bumenimg" src="https://s2.ax1x.com/2019/09/15/ncLzZR.png">
+					<a href="yingjianzu.html"><img class="img-fluid bumenmore" src="https://s2.ax1x.com/2019/09/05/nmzh0e.png"></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 兴趣小组板块结束 -->
+
+		<!-- 页脚开始 -->
+		<div class="footer text-center" style="margin-bottom:0; padding-top: 1%;">
+			<div class="footer-up">
+				<div class="footer-left">
+					<p style="display: inline-block; margin-right: 2%;"><a href="http://210.44.154.22:5000/">橙果网盘</a></p>
+					<p style="display: inline-block; margin-right: 2%;"><a href="http://jwxt.qlu.edu.cn/">教务系统</a></p>
+					<p style="display: inline-block; margin-right: 2%;"><a href="http://jwc.qlu.edu.cn/">教务处</a></p>
+					<p style="display: inline-block; margin-right: 2%;"><a href="http://210.44.144.205:8071">数字工大</a></p>
+					<p style="display: inline-block; margin-right: 2%;"><a href="http://ms.qlu.edu.cn/">微软正版化</a></p>
+				</div>
+				<div class="footer-right">
+					<p style="margin-top: 1%; margin-left: 2%;">扫码关注橙果工作室微信公众号，了解更多资讯</p>
+				</div>
+				<img class="img-fluid footer-qrc" src="https://s2.ax1x.com/2019/09/05/nnSGHe.jpg" />
+			</div>
+
+			<div class="footer-down">
+				<p>2018-2019 | 版权所有@齐鲁工业大学网络信息中心橙果工作室 </p>
+				<p>本页面由橙果网站组提供技术支持</p>
+				<p style="padding-bottom: 1%;">豫ICP备19025563号</p>
+			</div>
+
+		</div>
+		<!-- 页脚结束 -->
+
+		<!-- JS加载放在最后以提高页面加载速度 -->
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</body>
+</html>

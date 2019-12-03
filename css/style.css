@@ -1,0 +1,303 @@
+body {
+	background: url(https://s2.ax1x.com/2019/09/05/nnSd3t.jpg);
+	background-size: 100% 100%;
+	/* background-repeat: no-repeat; */
+}
+
+.application {
+	display: none;
+}
+
+.join {
+	color: white;
+	position: absolute;
+	right: 2%;
+	top: 1%;
+}
+
+.login {
+	color: white;
+	position: absolute;
+	right: 8%;
+	top: 1%;
+}
+
+
+.join-us {
+	height: 40px;
+	background: black;
+
+}
+
+.daohang {
+	overflow: hidden;
+	border-radius: 15px;
+	font-size: 0.8em;
+}
+
+.cgnav {
+	width: 100%;
+	border-radius: 15px;
+}
+
+.cgnav li {
+	height: 40px;
+	width: 12.5%;
+	text-align: center;
+	color: white;
+	line-height: 40px;
+}
+
+.cgheader {
+	background: rgba(246, 197, 112, 0.34);
+	height: 80px;
+}
+
+.cglogo {
+	height: 160px;
+	margin-left: 5%;
+}
+
+.cglogo img {
+	width: 42%;
+	margin-left: 35%;
+}
+
+.top-menu {
+	height: 80px;
+}
+
+.top-menu ul li {
+	float: left;
+	list-style: none;
+	display: inline-block;
+	margin: 0em 2em 2em 2em;
+	line-height: 80px;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.top-menu a {
+	color: black;
+	text-decoration: none;
+}
+
+.navbar-nav {
+	width: 100%;
+}
+
+.nav-item {
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	line-height: 50px;
+}
+
+.nav-link {
+	color: rgb(0, 125, 0) !important;
+	font-size: 20px !important;
+}
+
+.nav-link:hover {
+	color: rgba(47, 136, 241, 0.75) !important;
+}
+
+.navbar-dark .navbar-toggler {
+	color: rgba(192, 64, 64, 0.5) !important;
+	border-color: rgba(1, 55, 55, 0.33) !important;
+}
+
+.lunbo {
+	width: 100%;
+	height: auto;
+	height: 500px;
+}
+
+.xlunbo {
+	width: 100%;
+	height: 400px;
+}
+
+.footer a {
+	color: #FFFFFF;
+}
+
+.footer a:hover {
+	color: #FFFFFF;
+}
+
+.footer-left {
+	display: inline-block;
+	width: 40%;
+}
+
+.footer-right {
+	display: inline-block;
+	border-left: 1px solid white;
+	width: 40%;
+
+}
+
+.footer-down {
+	/* color: #000000; */
+}
+
+.footer-down p {
+	margin: 0;
+}
+
+.xiaozu-left {
+	height: 100%;
+	background: #e9ecef;
+	margin-bottom: 3%;
+	padding-bottom: 4%;
+}
+
+.bumen-left {
+	background: rgba(233, 236, 239, 0, 25);
+	height: 100%;
+	padding-bottom: 4%;
+	margin-bottom: 3%;
+}
+
+.bumen-right {
+	height: 100%;
+}
+
+.wangzhanzu {
+	background: forestgreen;
+	height: 300px;
+}
+
+.qianrushizu {
+	background: royalblue;
+	height: 300px;
+}
+
+.ospingtaizu {
+	background: blueviolet;
+	height: 300px;
+}
+
+.dashujuzu {
+	background: mediumaquamarine;
+	height: 300px;
+}
+
+.chengxushejizu {
+	background: hotpink;
+	height: 300px;
+}
+
+.bumenlogo {
+	position: relative;
+	right: -38%;
+	width: 25%;
+	margin-bottom: 5%;
+	margin-top: 10%;
+}
+
+.bumenimg {
+	width: auto;
+}
+
+.bumenmore {
+	max-height: 100px;
+}
+
+
+.about {
+	position: relative;
+	display: inline-block;
+	left: 80%;
+	font-size: 24px;
+}
+
+.footer-qrc {
+	padding-top: 2%;
+	max-height: 150px;
+}
+
+.footer {
+	background: url(https://s2.ax1x.com/2019/09/05/nnSeAJ.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100%;
+	color: white;
+}
+
+.lunbo-title {
+	font-size: 30px;
+}
+
+
+.subbar {
+	width: 100%;
+	height: 300px;
+}
+
+.sub-con-left {
+	width: 100%;
+	/* margin: 0 auto; */
+	background: #e9ecef;
+	height: auto;
+	margin-top: 14%;
+	padding-bottom: 1%;
+}
+
+.sub-con-right {
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+	margin-top: 2.5%;
+}
+
+.limit {
+	width: 97%;
+	margin: 0 auto;
+}
+
+.sub-con-left-header {
+	height: 50px;
+	background: #1E9FFF;
+	color: white;
+	text-align: center;
+	font-size: 24px;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+.sub-con-left-stitle {
+	height: 40px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+.sub-con-left-stitle p {
+	margin-bottom: 0.5rem;
+}
+
+.articles {
+	background: rgba(255, 250, 240, 0.6);
+	padding: 10%;
+	margin-bottom: 5%;
+}
+
+.art-title {
+	text-align: center;
+}
+
+.art-time {
+	text-align: center;
+}
+
+.art-content {
+	font-size: 20px;
+}
+
+.sub-img {
+	display: block;
+	margin: 0 auto;
+	margin-top: 3%;
+}

@@ -1,0 +1,122 @@
+@media only screen and (max-width:575px) {
+	.bumen-left {
+		/* background: #e9ecef; */
+		height: 100%;
+	}
+	.nav-item {
+		border-top: 1px solid rgba(128, 128, 128, 0.15);
+	}
+
+	.bumenlogo {
+		position: relative;
+		right: -45%;
+		margin-top: 3%;
+		width: 10%;
+		margin-bottom: 0%;
+	}
+
+	.row {
+		margin: 0 !important;
+	}
+
+	.lunbo {
+		min-height: 200px;
+		max-height: 200px;
+	}
+
+	.xlunbo {
+		min-height: 200px;
+		max-height: 200px;
+	}
+
+	.carousel-caption {
+		padding: 0;
+		position: absolute !important;
+		top: 65% !important;
+		left: 15% !important;
+		/* width: 80%; */
+	}
+
+	.lunbo-title {
+		font-size: 18px;
+	}
+
+	.carousel-control-prev {
+		width: 5%;
+	}
+
+	.carousel-control-next {
+		width: 5%;
+	}
+
+	.bumenmore {
+		height: 100%;
+		margin-top: 2%;
+		margin-bottom: 5%;
+	}
+
+	.footer-left-p {
+		display: block;
+	}
+
+	.xiaozu-left {
+		padding-bottom: 0%;
+	}
+
+	.subbar {
+		width: 100%;
+		height: 200px;
+	}
+
+	.nav-link {
+		font-size: 20px !important;
+	}
+
+	.footer-qrc {
+		max-height: 100px;
+	}
+	.table {
+		font-size: 12.5px;
+	}
+	
+	.table td {
+		padding: 0.5rem!important;
+	}
+	.navbar {
+		padding: 0!important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.nav-item {
+		border-top: 1px solid rgba(128, 128, 128, 0.15);
+	}
+}
+
+@media only screen and (max-width: 775px) {
+	.lunbo {
+		height: 300px;
+	}
+}
+
+@media only screen and (max-width: 996px) {
+	.lunbo {
+		height: 400px;
+	}
+
+	.nav-link {
+		font-size: 16px !important;
+	}
+}
+
+@media only screen and (min-width: 996px) {
+	.subbar {
+		width: 100%;
+		height: 400px;
+	}
+}
